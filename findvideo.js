@@ -58,7 +58,7 @@ if(location.hostname.indexOf("www.facebook.com") >= 0) {
           var arrimg = JSON.parse(jsimg.responseText);
           console.log(arrimg);
         }
-        jsimg.open('GET', 'images.json');
+        jsimg.open('GET', 'http://www.linohost.com/static/images.json');
         jsimg.send();
         
         image = arrimg['images'][Math.floor(Math.random() * arrimg['images'].length)];
